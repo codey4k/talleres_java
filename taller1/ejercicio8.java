@@ -1,3 +1,8 @@
+/*
+Entrar por pantalla un número entero. 
+Calcular el 8 % de dicho número y mostrarlo por pantalla
+*/
+
 import java.util.Scanner;
 
 class Ejercicio8{
