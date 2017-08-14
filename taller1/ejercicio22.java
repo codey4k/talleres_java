@@ -17,13 +17,21 @@ class Ejercicio22 {
         System.out.print("Ingrese segundo dato ");
         int n2 = dato.nextInt();
         
+        n1 = n1 + n2;
+        n2 = n1 - n2;
+        n1 = n1 - n2;
         
+        System.out.print(
+            "El primer dato ahora vale " + n1 + "\n"
+            + "El segundo dato ahora vale "  + n2
+            + "\n"
+        );
         
     }
     
     public static void main(String[] args) {
         Ejercicio22 e = new Ejercicio22();
-        e.cambiaValor();
+        e.cambiarValor();
     }
     
 }

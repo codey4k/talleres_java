@@ -13,7 +13,7 @@ class Porcentaje {
     }
 
     public void porcentaje(){
-        //code
+        
         Scanner dato = new Scanner(System.in);
 
         System.out.print("Dame la cantidad de alumnos ");        
