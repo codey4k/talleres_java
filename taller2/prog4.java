@@ -9,6 +9,7 @@ un cliente cualquiera por la compra de un portátil.
 import java.util.Scanner;
 
 class ejercicio4{
+    static final int PORCENTAJE = 10;
 
     public static void procesos(){
         Scanner dato = new Scanner(System.in);
@@ -34,15 +35,15 @@ class ejercicio4{
 
             if(costo >= 1000000){
                 if(marca == "tly"){
-                    desc = costo * 15 / 100;
+                    desc = costo * (PORCENTAJE + 5) / 100;
                 }else{
-                    desc = costo * 10 / 100;
+                    desc = costo * PORCENTAJE / 100;
                 }
             }
 
             else if(costo < 1000000){
                 if(marca == "tly"){
-                    desc = costo * 5 / 100;
+                    desc = costo * (PORCENTAJE - 5) / 100;
                 }
                 else{
                     desc = 0;
@@ -51,7 +52,7 @@ class ejercicio4{
 
             totalIva = costo * iva;
             total = costo + totalIva - desc;
-            System.out.print(total);
+            System.out.println(total);
 
         } 
         
@@ -59,7 +60,8 @@ class ejercicio4{
     }
 
     public static void main(String[] args){
-        procesos();
+        ejercicio4 e = new ejercicio4();
+        e.procesos();
     }
 
 }
