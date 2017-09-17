@@ -20,9 +20,6 @@ class prog6 {
     public void programa() {
         Scanner dato = new Scanner(System.in);
 
-        int nuevoDia = 0, 
-            nuevoMes = 0, 
-            nuevoAno = 0;
 
         System.out.print("Ingresa dia ");
         int dia = dato.nextInt();
