@@ -5,53 +5,55 @@
 
 import java.util.Scanner;
 
-class p {
+class Eliminador {
 
-    private static int tam;
-    private static int vector[] = new int[tam];
+    private static int tam, elimina;
+    
+    private static int vector[];
 
     public static void main(String[] args) {
+        
         Scanner dato = new Scanner(System.in);
-        int elimina, i;
-
+            
         System.out.print("Ingrese el tamaño del vector: ");
         tam = dato.nextInt();
+        vector[] = new int[tam] 
 
-        int vector[] = new int[tam];
-
-        for(i = 0; i < tam; i++){
+        for(int i = 0; i < tam; i++){
             System.out.print("Ingrese un numero: ");
             vector[i] = dato.nextInt();
         }
 
         System.out.print("Ingrese un numero que desea eliminar: ");
         elimina = dato.nextInt();
-
-        eliminar(elimina, i);//30
     }
 
-    public static void eliminar(int elimina, int i) {
+
+    public static void eliminarEl(int elimina) {
         int eliminados = 0;
 
-        for(i = 0; i < tam; i++){
+        for(int i = 0; i < tam; i++){
             if(vector[i] == elimina){//37
                 for(int j = i; j < tam - 1; j++){
-                    vector[j] = vector[j+1];
+                    vector[j] = vector[i+1];
                 }
             }
             eliminados += 1;
-            // i -= 1;
+            i -= 1;
             tam -= 1;
         }
-    }
-    
-        System.out.print(
-            "Se elimino " + eliminados + " veces el numero " + elimina
+        
+        mostrar(eliminados);
+    }//fin de metodo
+       
+    public static void mostrar(int eliminados){
+        System.out.println(
+            "Se elimino " + eliminados + " veces el numero" + elimina
         );
-    
-        for(int j = 0; j < tam; j++){
-            System.out.print(vector[j]);
+        
+        for(int i = 0; i < tam; i++){
+            System.out.println(vector[i]);
         }
-    }
-    
+    }// fin del metodo
+
 }
